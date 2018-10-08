@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layer</title>
+</head>
+<body>
+<button id="login">公司登陆</button>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="layer/layer.js" charset="utf-8"></script>
+<script>
+    $(function () {
+        $('#login').on('click', function () {
+            layer.open({
+                type: 2,
+                title: 'Jenny登陆',
+                skin: 'layui-layer-lan',
+                // closeBtn: 0,
+                shadeClose: true, //点击遮罩关闭层
+                area : ['400px' , '280px'],
+                content:'login.html'//弹框显示的url
+            });
+        });
+    });
+</script>
+
+</html>
